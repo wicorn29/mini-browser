@@ -1,8 +1,8 @@
-Embedded Web Browser
+#Mini Browser
 
 This project is an embedded web browser implemented using HTML, CSS, and JavaScript. It provides a simple web browsing experience within a webpage, allowing users to navigate websites, go back and forward, reload pages, and more.
 
-Features:
+#Features
 
 - URL Navigation: Enter a URL or search term in the address bar and press "Go" to navigate to the specified webpage or perform a search.
 - Back and Forward: Navigate through the browsing history using the back and forward buttons, just like in a regular web browser.
@@ -13,7 +13,7 @@ Features:
   - Default Color: Reset the theme color to the default setting.
 - Responsive Design: The embedded web browser adapts to different screen sizes and maintains a consistent user experience on desktop and mobile devices.
 
-Usage:
+#Usage:
 
 1. Clone the repository or download the source code.
 2. Open the index.html file in a web browser.
@@ -22,22 +22,22 @@ Usage:
 
 Feel free to modify and enhance the project to suit your specific needs. Contributions and feedback are always welcome!
 
-Compatibility:
+#Compatibility
 
 The embedded web browser is compatible with modern web browsers, including Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari.
 
 Please note that the project relies on certain web browser APIs, and some features may not be available in older or less commonly used browsers.
 
-License:
+#License
 
 This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as per the terms of the license.
 
-Credits:
+#Credits
 
-This project was developed by [Your Name]. If you have any questions or suggestions, please feel free to reach out to [your@email.com].
+This project was developed by wicorn29. If you have any questions or suggestions, please feel free to reach out to wicorn29@gmail.com.
 
 Special thanks to the creators of the open-source libraries and resources used in this project. Their contributions are greatly appreciated.
 
-Acknowledgements:
+#Acknowledgements
 
 We would like to acknowledge the inspiration and learning from various online resources and tutorials that helped in the development of this project.
