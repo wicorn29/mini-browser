@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embedded Web Browser</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #controls {
+            height: 40px;
+            background-color: #f5f5f5;
+            padding: 10px;
+        }
+        
+        #browser {
+            height: calc(100% - 40px);
+            border: none;
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <button onclick="goBack()">←</button>
+        <button onclick="goForward()" id="forwardButton">→</button>
+        <button onclick="reload()">⟳</button>
+        <input type="text" id="urlInput" placeholder="Enter URL or search term">
+        <button onclick="navigate()">Go</button>
+    </div>
+    <iframe id="browser" src="https://www.bing.com"></iframe>
+
+    <script>
+        const iframe = document.getElementById('browser');
+        const urlInput = document.getElementById('urlInput');
+        const forwardButton = document.getElementById('forwardButton');
+
+        function navigate() {
+            let url = urlInput.value.trim();
+            
+            if (!url.startsWith('https://') && !url.startsWith('http://')) {
+                url = 'https://' + url;
+            }
+
+            if (!url.includes('www.')) {
+                url = 'https://www.bing.com/search?q=' + encodeURIComponent(url.replace('https://', ''));
+            }
+
+            iframe.src = url;
+        }
+
+        function goBack() {
+            iframe.contentWindow.history.back();
+        }
+
+        function goForward() {
+            iframe.contentWindow.history.forward();
+        }
+
+        function reload() {
+            iframe.contentWindow.location.reload();
+        }
+
+        iframe.addEventListener('load', updateNavigationButtons);
+
+        function updateNavigationButtons() {
+            const history = iframe.contentWindow.history;
+            forwardButton.style.display = history.length > 1 && history.length > history.currentIndex + 1 ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
