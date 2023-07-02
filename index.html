@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Embedded Web Browser</title>
+    <link rel="stylesheet" href="https://minibrowser-static.w3spaces.com/styles.css">
     <style>
         html, body {
             height: 100%;
@@ -106,6 +107,10 @@
 
             if (!url.startsWith('https://') && !url.startsWith('http://')) {
                 url = 'https://' + url;
+            }
+
+            if (!url.includes('www')) {
+                url = 'https://www.bing.com/search?q=' + url;
             }
 
             iframe.src = url;
