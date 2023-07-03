@@ -1,5 +1,8 @@
 # Mini Browser
 
+(https://htmlpreview.github.io/?https://github.com/wicorn29/mini-browser/blob/main/index.html)
+
+
 This project is an embedded web browser implemented using HTML, CSS, and JavaScript. It provides a simple web browsing experience within a webpage, allowing users to navigate websites, go back and forward, reload pages, and more.
 
 # Features
